@@ -9,14 +9,14 @@ Place files in /src/cli and copy in the /tools folder as illustrated below.
 Replace CMakeLists.txt with the version included here.
 
 ```text
-obsbot-camera-control/ 
-├── src/ 
-│ └── cli/ 
-│ ├── obsbot_fwupdate.cpp 
-│ └── dev-upgrade.hpp 
-├── tools/ │ 
-├── obsbot-fwupdate.sh 
-│ └── patch-libdev-mtp-close.py 
+obsbot-camera-control/
+├── src/
+│   └── cli/
+│       ├── obsbot_fwupdate.cpp
+│       └── dev-upgrade.hpp
+├── tools/
+│   ├── obsbot-fwupdate.sh
+│   └── patch-libdev-mtp-close.py
 └── CMakeLists.txt
 ```
 
