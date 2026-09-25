@@ -8,6 +8,7 @@ install https://github.com/aaronsb/obsbot-camera-control
 Place files in /src/cli and copy in the /tools folder as illustrated below.
 Replace CMakeLists.txt with the version included here.
 
+```text
 obsbot-camera-control/ 
 ├── src/ 
 │ └── cli/ 
@@ -17,7 +18,7 @@ obsbot-camera-control/
 ├── obsbot-fwupdate.sh 
 │ └── patch-libdev-mtp-close.py 
 └── CMakeLists.txt
-
+```
 
 Open a cli in the parent folder and build:
 
