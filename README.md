@@ -1,5 +1,5 @@
 # obsbot_linux_updater
- A firmware updater for Obsbot webcams for Linux
+A firmware updater for OBSBOT webcams for Linux
  
 *** I offer this without support or guarantees. Brick your camera at your own risk. ***
 
