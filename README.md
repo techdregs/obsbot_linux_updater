@@ -44,6 +44,41 @@ UPGRADE
 ```
 to begin the update.
 
+During the firmware update, the camera may disconnect from USB and reconnect several times. This is expected.
+
+The OBSBOT updater switches the camera between its normal USB video mode and a temporary firmware-update/MTP mode, so you may see messages such as:
+
+```text
+USB disconnect
+device was disconnected
+remove mtp device
+find a new mtp device
+open mtp device success
+```
+
+You may also see the camera temporarily disappear from /dev/video* and then reappear.
+
+Do not physically unplug the camera, disconnect power, or interrupt the updater just because the camera temporarily disappears from the system.
+
+Some low-level messages such as:
+
+```text
+Read: timeout get urb
+WriteBulkx: device was disconnected
+```
+
+may also appear during USB mode transitions and are not necessarily failures by themselves.
+
+The important thing is to let the updater continue unless it reports an explicit error or exits.
+
+If the updater appears completely stuck for an extended period while repeatedly printing only:
+
+```text
+Read: device was disconnected
+```
+
+that indicates something has gone wrong rather than a normal mode transition.
+
 Notes:
 1. Connect the camera directly to a USB root port, not through a downstream hub. The OBSBOT Linux SDK used here cannot correctly rediscover the camera in firmware-update mode when Linux gives it a dotted USB topology path such as 1-2.2. The launcher detects this condition and refuses to proceed.
 2. The tool currently patches the x86-64 OBSBOT libdev.so implementation at runtime to work around an MTP reconnect deadlock encountered during firmware updates.
