@@ -22,21 +22,26 @@ obsbot-camera-control/
 
 Open a cli in the parent folder and build:
 
+```text
 cd obsbot-camera-control
 
 cmake -S . -B build
 cmake --build build -j
+```
 
 Updating the firmware, run:
 
+```text
 ./tools/obsbot-fwupdate.sh /path/to/firmware.bin
+```
 
 The updater will automatically detect the connected OBSBOT camera and its serial number.
 
 Before flashing, it will display the detected camera, current firmware version, and firmware package. You must explicitly type:
 
+```text
 UPGRADE
-
+```
 to begin the update.
 
 Notes:
