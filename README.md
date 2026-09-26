@@ -3,6 +3,12 @@ A firmware updater for OBSBOT webcams for Linux
  
 *** I offer this without support or guarantees. Brick your camera at your own risk. ***
 
+
+video link: https://youtu.be/V3qQWK-jwk8
+
+
+Instructions:
+
 install https://github.com/aaronsb/obsbot-camera-control
 
 Place files in /src/cli and copy in the /tools folder as illustrated below.
